@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Button</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="dark-mode">
+    <div class="nav-bar" id="nav-bar">
+        <ul class="nav-ul">
+            <li id="li">HOME</li>
+            <li id="li">ABOUT US</li>
+            <li id="li">CONTACT</li>
+            <li id="li">LOGIN</li>
+        </ul>
+        <div class="toggle-btn" id="toggle-btn">
+            <input type="checkbox" id="checkbox">
+            <label for="checkbox" class="toggle-label">
+                <span class="toggle-ball"></span>
+            </label>
+        </div>
+    </div>
+    <script>
+        let toogle_btn = document.getElementById('toggle-btn')
+        let nav_bar = document.getElementById('nav-bar')
+        let checkBox = document.getElementById('checkbox')
+        let li_txt = document.querySelectorAll('li')
+        let body = document.getElementById('dark-mode')
+
+        toogle_btn.addEventListener('change', function() {
+            if (checkBox.checked) {
+                body.classList.add('dark-mode-active')                
+            }
+            else {
+                body.classList.remove('dark-mode-active')                
+            }
+        })
+    </script>
+</body>
+</html>
