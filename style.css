@@ -38,7 +38,7 @@ html,body {
 
 .toggle-btn {
     position: relative;
-    width: 75.80%;
+    width: 75%;
     right: 20px;
     height: 60px;
     display: flex;
@@ -99,4 +99,35 @@ body.dark-mode-active .nav-ul li {
 body.dark-mode-active .nav-bar {
     background-color: white;
     transition: .5s;
+}
+
+
+/* Responsive design */
+
+
+@media (max-width: 768px) {
+    .toggle-btn {
+        display: flex;
+        position: absolute;
+        top: 80px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    #checkbox:checked + .toggle-label {
+        background-color: white;
+    }
+
+    
+    #checkbox:checked + .toggle-label .toggle-ball{
+        background-color: black;
+    }
+
+    .toggle-label {
+        background-color: black;
+    }
+
+    .toggle-ball {
+        background-color: white;
+    }
 }
